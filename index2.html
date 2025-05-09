@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Display</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-container {
+      animation: fadeZoom 2s ease forwards;
+      opacity: 0;
+      transform: scale(0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    @keyframes fadeZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      background: linear-gradient(45deg, #f4f4f4, #e0e0e0);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .instagram:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .whatsapp:hover {
+      background: #25D366;
+    }
+
+    .credits {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .credits a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .credits a:hover {
+      text-decoration: underline;
+    }
+
+    audio {
+      display: none;
+    }
+    
+    img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="https://i.ibb.co/7xH15bbB/images.jpg" alt="images">
+    </div>
+
+    <div class="social-links">
+      <a href="https://instagram.com/_arup.borah_" target="_blank" class="social-link instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/+916002148763" target="_blank" class="social-link whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+      </a>
+    </div>
+
+    <div class="credits">
+      Designed by <a href="https://borahdigitalsolutions.rf.gd" target="_blank">Borah Digital Solutions</a>
+    </div>
+  </div>
+
+  <!-- Background Audio -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/x6788s.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
